@@ -4,8 +4,7 @@
 
 
 // swap
-
-void bswap(int *a, int *b) 
+void swap(int *a, int *b) 
 {
     int tmp = *a;
     *a = *b;
@@ -20,19 +19,25 @@ int main()
     int len = sizeof(arr)/sizeof(arr[0]);
     int cnt = 0;
 
-    do {
-        for(int i=0; i<len-1; i++) 
-        {
-            for(int j=1; j<len-i-1; j++) {
-                if(arr[i]>arr[j]) 
-                {
-                    bswap(&arr[i], &arr[j]);
-                    cnt++;
-                }
+
+    for(int i=0; i<len-1; i++) // 6번
+    {
+        printf("check: %i", i);
+        for(int j=0; j<len-i-1; j++) {
+            if(arr[i]>arr[j+1]) 
+            {
+                // swap
+                swap(&arr[i], &arr[j+1]);
+                cnt++;
             }
         }
-    } while (cnt>0);
+        printf("\n");
+    }
     
+    // print
+    for(int i=0; i<len; i++) printf("%i\n", arr[i]);
+
+
     return 0;
 }
 
