@@ -27,7 +27,7 @@ int main()
     }
 
     // print
-    // for(int i=0; i<len; i++) printf("%i\n", arr[i]);
+    for(int i=0; i<len; i++) printf("%i\n", arr[i]);
 
     return 0;
 }
