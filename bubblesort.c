@@ -7,9 +7,10 @@ void swap(int *a, int *b);
 int main()
 {
     
-    int arr[] = {7,6,9,1,3,2,4,5,8}; 
+    // int arr[] = {7,6,9,1,3,2,4,5,8}; 
     // int arr[] = {7,6,9,1,3,2,4}; 
     // int arr[] = {1,2,3,4,5,6,8}; 
+    int arr[] = {9,8,7,6,5,4,3,2,1}; // considering the worst scenario is important
 
     int len = sizeof(arr)/sizeof(arr[0]);
     bool isSwapped = false;
@@ -22,7 +23,7 @@ int main()
     //
     // 7(=len) - x = (4) --> x = 3 
 
-    for(int i = 0; i < len-3; i++) // vertical (4 rows)
+    for(int i = 0; i < len-1; i++) // vertical (4 rows)
     {
         for(int j = 0; j < len-i-1; j++) // horizontal (x times)
         {
